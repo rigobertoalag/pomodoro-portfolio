@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/pomodoro-portfolio/static/css/main.191118b0.chunk.css",
-    "main.js": "/pomodoro-portfolio/static/js/main.95d99032.chunk.js",
-    "main.js.map": "/pomodoro-portfolio/static/js/main.95d99032.chunk.js.map",
+    "main.css": "/pomodoro-portfolio/static/css/main.5f156ee4.chunk.css",
+    "main.js": "/pomodoro-portfolio/static/js/main.d5bf7470.chunk.js",
+    "main.js.map": "/pomodoro-portfolio/static/js/main.d5bf7470.chunk.js.map",
     "runtime-main.js": "/pomodoro-portfolio/static/js/runtime-main.ff029b64.js",
     "runtime-main.js.map": "/pomodoro-portfolio/static/js/runtime-main.ff029b64.js.map",
     "static/js/2.8ea8e905.chunk.js": "/pomodoro-portfolio/static/js/2.8ea8e905.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.bda97b12.chunk.js": "/pomodoro-portfolio/static/js/3.bda97b12.chunk.js",
     "static/js/3.bda97b12.chunk.js.map": "/pomodoro-portfolio/static/js/3.bda97b12.chunk.js.map",
     "index.html": "/pomodoro-portfolio/index.html",
-    "static/css/main.191118b0.chunk.css.map": "/pomodoro-portfolio/static/css/main.191118b0.chunk.css.map",
+    "static/css/main.5f156ee4.chunk.css.map": "/pomodoro-portfolio/static/css/main.5f156ee4.chunk.css.map",
     "static/js/2.8ea8e905.chunk.js.LICENSE.txt": "/pomodoro-portfolio/static/js/2.8ea8e905.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ff029b64.js",
     "static/js/2.8ea8e905.chunk.js",
-    "static/css/main.191118b0.chunk.css",
-    "static/js/main.95d99032.chunk.js"
+    "static/css/main.5f156ee4.chunk.css",
+    "static/js/main.d5bf7470.chunk.js"
   ]
 }
