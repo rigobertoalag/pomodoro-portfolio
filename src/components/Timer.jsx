@@ -232,7 +232,7 @@ const Timer = () => {
                 {({ active }) => (
                   <div
                     className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                      active ? "bg-gray-100 text-gray-900 cursor-pointer" : "text-gray-700 cursor-pointer",
                       "block px-4 py-2 text-sm"
                     )}
                     onClick={() => testTime(false)}
@@ -245,7 +245,7 @@ const Timer = () => {
                 {({ active }) => (
                   <div
                     className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                      active ? "bg-gray-100 text-gray-900 cursor-pointer" : "text-gray-700 cursor-pointer",
                       "block px-4 py-2 text-sm"
                     )}
                     onClick={() => testTime(true)}
