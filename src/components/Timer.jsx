@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 
-import { Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/solid'
+import { Fragment } from "react";
+import { Menu, Transition } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/solid";
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 const Timer = () => {
@@ -14,7 +14,7 @@ const Timer = () => {
   const [begin, setBegin] = useState(false);
   const [pause, setPause] = useState(false);
   const [resume, setResume] = useState(false);
-  const [isTest, setIsTest] = useState(false)
+  const [isTest, setIsTest] = useState(false);
 
   const focusTime = () => {
     if (minutes === 0 && seconds === 0) {
@@ -59,15 +59,17 @@ const Timer = () => {
     setBegin(true);
   };
 
-  const testTime = (i) =>{
-    if(i){
+  const testTime = (i) => {
+    if (i) {
       setTime([parseInt(0), parseInt(10)]);
-      setIsTest(true)
-    }else{
+      setIsTest(true);
+      setIsFocus(true);
+    } else {
       setTime([parseInt(24), parseInt(0)]);
-      setIsTest(false)
+      setIsTest(false);
+      setIsFocus(false);
     }
-  }
+  };
 
   useEffect(() => {
     if (pause) {
@@ -89,13 +91,22 @@ const Timer = () => {
 
   return (
     <div className="flex flex-col justify-center items-center h-full w-full">
+      {begin ? (
+        isFocus ? (
+          <p className="text-xl text-red-500 font-bold">¡Tiempo de concentracion!</p>
+        ) : (
+          <p className="text-xl text-green-500 font-bold">Toma un respiro</p>
+        )
+      ) : null}
       <p className="text-8xl font-semibold">
         {minutes.toString().padStart(2, "0")} :{" "}
         {seconds.toString().padStart(2, "0")}
       </p>
-      {
-        isTest ? <p className="text-sm font-extralight text-gray-500">Tiempo de prueba</p> : null
-      }
+      {isTest ? (
+        <p className="text-sm font-extralight text-gray-500">
+          Tiempo de prueba
+        </p>
+      ) : null}
       {!begin ? (
         <button
           className="bg-green-500 py-4 px-6 mt-10 text-white text-xl rounded-xl flex flex-row shadow-md"
@@ -195,16 +206,7 @@ const Timer = () => {
         </div>
       )}
 
-      {/* <div className="flex flex-col mt-8">
-        <button className="p-3 bg-gray-300 rounded-lg shadow-md text-sm mb-2">
-          Tiempo regular
-        </button>
-        <button className="p-3 bg-gray-400 rounded-lg shadow-md text-sm">
-          Tiempo de prueba
-        </button>
-      </div> */}
-
-      <Menu as="div" className="relative inline-block text-left mt-4">
+      <Menu as="div" className="relative inline-block text-left mt-4 shadow-md">
         <div>
           <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
             Opciones
@@ -233,7 +235,7 @@ const Timer = () => {
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                       "block px-4 py-2 text-sm"
                     )}
-                    onClick={() => (testTime(false))}
+                    onClick={() => testTime(false)}
                   >
                     <p>Tiempo regular</p>
                   </div>
@@ -246,7 +248,7 @@ const Timer = () => {
                       active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                       "block px-4 py-2 text-sm"
                     )}
-                    onClick={() => (testTime(true))}
+                    onClick={() => testTime(true)}
                   >
                     <p>Tiempo de prueba</p>
                   </div>
