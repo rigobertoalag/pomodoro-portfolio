@@ -5,10 +5,10 @@ import Modal from './Modal.jsx'
 export default function Root(){
     const [open, setOpen] = useState(false)
     return(
-        <div className="mt-16 sm:w-full md:w-full lg:full flex flex-col items-center">
+        <div className="mt-8 sm:w-full md:w-full lg:full flex flex-col items-center">
             <p className="font-bold text-3xl md:text-5xl ">Tecnica pomodoro</p>
             <Timer />
-            <button className="mb-8" onClick={()=>setOpen(true)}>Aqui va el modal</button>
+            <button className="mb-8" onClick={()=>setOpen(true)}>Mas informacion de Pomodoro</button>
             {
                 open ? <Modal /> : null
             }
