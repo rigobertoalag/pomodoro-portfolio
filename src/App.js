@@ -1,11 +1,10 @@
 import './App.css';
-
-import Timer from './components/Timer.jsx'
+import Root from './components/Root.jsx'
 
 function App() {
   return (
-    <div>
-      <Timer/>
+    <div className="h-screen flex justify-center bg-gray-100">
+      <Root/>
     </div>
   );
 }
