@@ -61,9 +61,11 @@ const Timer = () => {
 
   const testTime = (i) =>{
     if(i){
-      setTime([parseInt(0), parseInt(5)]);
+      setTime([parseInt(0), parseInt(10)]);
+      setIsTest(true)
     }else{
       setTime([parseInt(24), parseInt(0)]);
+      setIsTest(false)
     }
   }
 
@@ -84,8 +86,6 @@ const Timer = () => {
       }
     }
   });
-
-  console.log(isTest)
 
   return (
     <div className="flex flex-col justify-center items-center h-full w-full">
